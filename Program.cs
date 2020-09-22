@@ -10,6 +10,22 @@ namespace ProjectEuler14
     {
         static void Main(string[] args)
         {
+            var alg = new Algorithm();
+            uint highestCounter = 0;
+            uint highestNumber = 0;
+
+            for (uint i = 10; i <= 1000000; i++)
+            {
+                uint result = alg.Run(i);
+                if (result > highestCounter)
+                {
+                    highestCounter = result;
+                    highestNumber = i;
+                }
+            }
+
+            Console.WriteLine(highestNumber);
+            Console.Read();
         }
     }
 }
